@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffd9e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            color: #ff66b2;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff66b2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #e64d87;
+        }
+    </style>
+    <title>Surprise</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hey Vanyaa!</h1>
+        <p>Just wanted to brighten your day!</p>
+        <p>Did you know that...</p>
+        <button onclick="showSurprise()">Click me!</button>
+        <p id="compliment"></p>
+    </div>
+    <script>
+        function showSurprise() {
+            const compliments = [
+                "Your smile could light up the darkest room.",
+                "I must be a snowflake because I've fallen for you.",
+                "Are you a magician? Because whenever I look at you, everyone else disappears.",
+                "You must be a parking ticket because you've got FINE written all over you."
+            ];
+
+            const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+            document.getElementById('compliment').innerText = randomCompliment;
+        }
+    </script>
+</body>
+</html>
